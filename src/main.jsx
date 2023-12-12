@@ -6,6 +6,7 @@ import router from './routes/router.jsx'
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import { theme } from './theme.js'
+import { Toaster } from 'react-hot-toast'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -14,5 +15,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <CssBaseline />
         <RouterProvider router={router} />        
       </ThemeProvider>
+      <Toaster/>
   </React.StrictMode>,
 )

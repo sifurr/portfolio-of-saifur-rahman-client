@@ -3,6 +3,7 @@ import Banner from "../components/Banner";
 import About from "../components/About";
 import Projects from "../components/Projects";
 import Contact from "../components/Contact";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
     return (
@@ -18,7 +19,8 @@ const HomePage = () => {
                 </div>
                 <div id="contact" className="my-20 mx-20">
                    <Contact/>
-                </div>           
+                </div> 
+                <Footer/>          
         </Box>
     );
 };
