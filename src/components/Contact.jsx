@@ -6,8 +6,7 @@ import toast from 'react-hot-toast';
 const Contact = () => {
     const { register, formState: { errors }, reset, handleSubmit } = useForm();
 
-    const onSubmit = async (data) => {
-        console.log('Form submitted:', data);
+    const onSubmit = async (data) => {    
         const userMessage = {
             name: data.name,
             email: data.email,
@@ -17,6 +16,7 @@ const Contact = () => {
         // console.log(userMessage)
 
         await axios.post("https://saifur-portfolio-server.vercel.app/api/v1/user/messages", userMessage)
+        
         .then(res => {
             console.log(res);
             if(res.data.insertedId)
@@ -30,8 +30,7 @@ const Contact = () => {
         })
         .catch(err => {
             // console.log(err.message)
-        })
-        
+        })       
 
         reset();
     };
@@ -43,26 +42,27 @@ const Contact = () => {
     };
 
     return (
-        <div className="contact-section p-10">
-            <div className="text-center mb-20">
-                <h1 className="text-2xl animate__animated animate__fadeInUp animate__delay-1s">
-                    <span className='text-4xl font-bold'>|</span> <span className='px-3 font-bold'>03 : Contact Me</span>{' '}
+        <div className="">
+            <div className="text-center mb-10 lg:mb-10">
+                <h1 className="text-lg lg:text-2xl uppercase animate__animated animate__fadeInUp animate__delay-1s">                
+                    <span className='text-4xl font-bold'>|</span> <span className='lg:px-3 font-bold'>03 : Contact Me</span>{' '}
                     <span className='text-4xl font-bold'>|</span>
                 </h1>
             </div>
+           
             <div>
-                <div className="container mx-auto text-neutral-300 w-2/3">
-                    <p className="mb-2">
+                <div className="container mx-auto text-neutral-300 w-full lg:w-2/3">
+                    <p className="mb-2 text-xs lg:text-base">
                         Contact me by filling out the form below. For direct inquiries, you can also reach out to me using the following information.
                     </p>
                     <div className='text-right border-r-4 pr-4 border-blue-300 mt-8 mb-10'>
-                        <div className="mb-2">
+                        <div className="mb-2 text-xs lg:text-base ">
                             <strong className=''>Name:</strong> {contactInfo.name}
                         </div>
-                        <div className="mb-2">
+                        <div className="mb-2 text-xs lg:text-base ">
                             <strong>Email:</strong> {contactInfo.email}
                         </div>
-                        <div className="mb-2">
+                        <div className="mb-2 text-xs lg:text-base ">
                             <strong>Social:</strong> <a href="https://linkedin.com/in/mr-saifur-rahman" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                         </div>
 
@@ -70,7 +70,7 @@ const Contact = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto text-neutral-300 w-2/4 bg-[#193a5e] drop-shadow-xl p-5 rounded-lg">
+            <div className="container mx-auto text-neutral-300 w-full lg:w-2/4 bg-[#193a5e] drop-shadow-xl p-5 rounded-lg">
                 <form onSubmit={handleSubmit(onSubmit)} className="text-neutral-300 animate__animated animate__fadeInUp animate__delay-2s">
                     <div className="mb-4">
                         <label htmlFor="name" className="block text-neutral-300 font-bold mb-2 ">

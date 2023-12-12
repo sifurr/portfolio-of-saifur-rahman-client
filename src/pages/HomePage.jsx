@@ -8,16 +8,16 @@ import Footer from "../components/Footer";
 const HomePage = () => {
     return (
         <Box className="text-neutral-300">            
-                <div id="home" className="mb-20">
+                <div id="home" className="mb-10 lg:mb-20">
                 <Banner/>                    
                 </div>
-                <div id="about" className="my-20  mx-20">
+                <div id="about" className="mb-10 lg:mb-20">
                     <About/>
                 </div>
-                <div id="projects" className="my-20 mx-20">
+                <div id="projects" className="mb-10 lg:mb-20">
                   <Projects/>
                 </div>
-                <div id="contact" className="my-20 mx-20">
+                <div id="contact" className="mb-10 lg:mb-20">
                    <Contact/>
                 </div> 
                 <Footer/>          

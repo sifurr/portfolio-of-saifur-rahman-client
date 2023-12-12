@@ -11,12 +11,12 @@ const Projects = () => {
     return (
         <div>
             <div className="text-center mb-5">
-                <h1 className="text-2xl"><span className='text-4xl font-bold'>|</span> <span className='px-3 font-bold'>02 : Projects</span> <span className='text-4xl font-bold'>|</span></h1>
+                <h1 className="text-lg lg:text-2xl uppercase"><span className='text-4xl font-bold'>|</span> <span className='px-3 font-bold'>02 : Projects</span> <span className='text-4xl font-bold'>|</span></h1>
             </div>
-            <p className='mb-16 w-2/3 mx-auto'>
+            <p className='mb-8 text-xs lg:text-lg lg:mb-16 w-full lg:w-2/3 mx-auto'>
                 Welcome to my projects showcase! Dive into a curated collection that highlights my skills and expertise in web development. Let's explore the digital realm together!
             </p>
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
+            <div className='mx-0 lg:mx-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-6'>
                 <Card sx={{ maxWidth: 345 }}>
                     <CardActionArea>
                         <CardMedia
