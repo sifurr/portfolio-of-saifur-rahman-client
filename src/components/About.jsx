@@ -10,7 +10,7 @@ const About = () => {
                 <div className='w-full lg:w-[60%] flex items-center'>
                     <p className=''>
                         <span className='text-base lg:text-xl font-bold uppercase'>
-                            Aspiring Full Stack Developer.
+                            Junior React Developer
                         </span>
                         <br />
 

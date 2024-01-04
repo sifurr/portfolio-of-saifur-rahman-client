@@ -37,7 +37,7 @@ const Contact = () => {
 
     const contactInfo = {
         name: 'Md Saifur Rahman',
-        email: 'tosaifurrahman@gmail.com',
+        email: 'saifurrahman.dev@gmail.com',
         linkedIn: 'linkedin.com/in/mr-saifur-rahman'
     };
 
